@@ -5,7 +5,7 @@ const { db, usersCollection } = require('./firebase');
 
 
 const corsOptions = {
-  origin: ['http://localhost:5173'],
+  origin: ['https://firebasetesting-frontend.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -14,7 +14,7 @@ const corsOptions = {
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('./', (req, res) => {
   res.send('Welcome to the Firebase Express API!');
 });
 // Register
